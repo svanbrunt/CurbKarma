@@ -1,0 +1,62 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+
+    <h2 class="page-title">
+    	Login
+    </h2>  
+
+<form method="post">
+
+	<table class="center">
+		<tr>
+			<td class="padded-top-20">
+				<input name="phone" id="phone-input" type="tel" placeholder="Mobile Phone #" required="true" value={{phone}}>
+
+			</td>
+		</tr>
+		<tr>
+			<td class="error">
+				{{error_user}}
+				{{error_phone}}
+			</td>
+
+		</tr>
+
+		<tr>
+			<td class="padded-top-20">
+				<input name="password" type="password" placeholder="Your 4-digit PIN" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+			</td>
+		</tr>
+		<tr>
+			<td class="error">
+				{{error_password}}
+			</td>
+		</tr>
+
+		<tr>
+			<td class="error">
+				{{error}}
+			</td>
+		</tr>
+
+	</table>
+
+	<div class="center padded-top-20">
+		<input type="submit">
+	</div>
+
+</form>
+
+
+<div class="center padded-top-20">
+		<a href="/forgot" class="no-link">
+			<p id="forgot-text">
+				Forgot your password?
+			</p>
+		</a>
+</div>
+
+
+{% endblock %}

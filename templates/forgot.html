@@ -1,0 +1,36 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+{% if error %}
+	{{error}}
+	<a href="/signup">Sign up here</a>
+{% endif %}
+
+
+<form method="post">
+
+	<table class="center">
+		<tr>
+			<td class="padded-top-20">
+				<input name="phone" id="phone-input" type="tel" placeholder="Mobile Phone #" required="true" value={{phone}}>
+
+			</td>
+		</tr>
+		<tr>
+			<td class="error">
+				{{error_user}}
+				{{error_phone}}
+			</td>
+
+		</tr>
+
+	</table>
+
+	<div class="center padded-top-20">
+		<input type="submit">
+	</div>
+
+</form>
+
+{% endblock %}

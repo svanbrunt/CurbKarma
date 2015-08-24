@@ -1,0 +1,288 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="message">
+		{{error}}
+		{{success}}
+	</div>
+
+<div id="report-wrapper">
+
+    <h2 class="page-title">
+    	Report an issue with your neighbour's car
+    </h2>
+    
+    <h4 class="page-subtitle">
+    	Enter the plate + describe the issue.  We'll let them know!
+	</h4>
+
+  	<form method="post">
+
+	  	<section class="display-large">
+
+		  	<table id="report-table">
+			  	<tr>
+				  	<th>
+						<!-- <label> -->
+			     		<div>
+			            	<b>State</b>
+							<!--<br>
+			        		<span id="help">State of the license plate</span> -->
+			         	</div>
+		         	</th>
+
+		         	<th>
+	     		 		<div>
+				        	<b>License Plate Number</b>
+				     	</div>
+			     	</th>
+		     	</tr>
+
+		     	<tr>
+			     	<td>
+						<select name="state1">
+							<option value="CA">CA</option>
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="DC">DC</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</td>
+				   	  	<!-- </label> -->
+					 	<!-- <label> -->
+				 	<td>
+					 	<input id="plate-input" type="text" name="plate1" value={{plate}}>
+				 	</td>
+					  	<!-- </label> -->
+			  	</tr>
+		  	</table>
+		</section>
+
+	  	<section class="display-small">
+
+     		<div id="report-div" class="center">
+
+	     		<div id="label" class="center">
+	            	<b>State</b>
+	         	</div>
+
+				<select name="state2" class="center">
+					<option value="CA">CA</option>
+					<option value="AL">AL</option>
+					<option value="AK">AK</option>
+					<option value="AZ">AZ</option>
+					<option value="AR">AR</option>
+					<option value="CO">CO</option>
+					<option value="CT">CT</option>
+					<option value="DE">DE</option>
+					<option value="DC">DC</option>
+					<option value="FL">FL</option>
+					<option value="GA">GA</option>
+					<option value="HI">HI</option>
+					<option value="ID">ID</option>
+					<option value="IL">IL</option>
+					<option value="IN">IN</option>
+					<option value="IA">IA</option>
+					<option value="KS">KS</option>
+					<option value="KY">KY</option>
+					<option value="LA">LA</option>
+					<option value="ME">ME</option>
+					<option value="MD">MD</option>
+					<option value="MA">MA</option>
+					<option value="MI">MI</option>
+					<option value="MN">MN</option>
+					<option value="MS">MS</option>
+					<option value="MO">MO</option>
+					<option value="MT">MT</option>
+					<option value="NE">NE</option>
+					<option value="NV">NV</option>
+					<option value="NH">NH</option>
+					<option value="NJ">NJ</option>
+					<option value="NM">NM</option>
+					<option value="NY">NY</option>
+					<option value="NC">NC</option>
+					<option value="ND">ND</option>
+					<option value="OH">OH</option>
+					<option value="OK">OK</option>
+					<option value="OR">OR</option>
+					<option value="PA">PA</option>
+					<option value="RI">RI</option>
+					<option value="SC">SC</option>
+					<option value="SD">SD</option>
+					<option value="TN">TN</option>
+					<option value="TX">TX</option>
+					<option value="UT">UT</option>
+					<option value="VT">VT</option>
+					<option value="VA">VA</option>
+					<option value="WA">WA</option>
+					<option value="WV">WV</option>
+					<option value="WI">WI</option>
+					<option value="WY">WY</option>
+				</select>
+
+				<br>
+
+		 		<div id="label" class="center">
+		        	<b>License Plate Number</b>
+		     	</div>
+
+			 	<input id="plate-input" class="center" type="text" name="plate2" value={{plate}} >
+	     	</div>
+	  	</section>
+
+			<table id="issue-table">
+			  	<tr>
+			 		<th colspan="2">
+				 		<div id="label">
+				        	<b>Describe the issue</b>
+				     	</div>
+				 	</th>
+				</tr>
+				<tr class="issue-detail">
+					<td class="issue-detail">
+						<input type="radio" name="status" value="may be">Car <u>might get</u>:
+					</td>
+
+					<td class="issue-detail">
+						<input type="radio" name="incident" value="ticketed">Ticketed
+					</td>
+				</tr>
+
+				<tr class="issue-detail">
+					<td class="issue-detail">
+						<input type="radio" name="status" value="has been">Car <u>has been</u>:
+					</td>
+
+					<td class="issue-detail">
+						<input type="radio" name="incident" value="towed">Towed
+					</td>
+				</tr>
+
+				<tr class="issue-detail">
+					<td class="issue-detail">
+						<!-- <input type="radio" name="status" value="actual">Car has been: -->
+					</td>
+
+					<td class="issue-detail">
+						<input type="radio" name="incident" value="vandalized">Vandalized
+					</td>
+				</tr>
+			</table>
+
+			<div id="notes-div" class="center">
+				<p id="issue-notes">Any other notes?</p>
+				<textarea name="notes1" class="center" id="issue-notes-area" maxlength="60" wrap="soft"></textarea>
+			</div>
+
+			<!-- <table id="issue-table">
+			  	<tr>
+			 		<th colspan="2">
+				 		<div id="label">
+				        	<b>Describe the issue</b>
+				     	</div>
+				 	</th>
+				</tr>
+
+				<tr class="issue-detail">
+					<td class="issue-detail">
+						<input type="radio" name="status" value="may be">Car <u>might get</u>:
+					</td>
+
+					<td class="issue-detail">
+						<input type="radio" name="incident" value="ticketed">Ticketed
+					</td>
+				</tr>
+
+				<tr class="issue-detail">
+					<td class="issue-detail">
+						<input type="radio" name="status" value="has been">Car <u>has been</u>:
+					</td>
+
+					<td class="issue-detail">
+						<input type="radio" name="incident" value="towed">Towed
+					</td>
+				</tr>
+
+				<tr class="issue-detail">
+					<td class="issue-detail">
+						<!-- <input type="radio" name="status" value="actual">Car has been: -->
+					</td>
+
+					<td class="issue-detail">
+						<input type="radio" name="incident" value="vandalized">Vandalized
+					</td>
+				</tr>
+			</table> -->
+
+			<div id="notes-div" class="center">
+				<p id="issue-notes">Any other notes?</p>
+				<textarea name="notes2" class="center" id="issue-notes-area" maxlength="60" wrap="soft"></textarea>
+			</div>
+
+
+   	  	<br>
+
+        <div id="label">
+          <input type="submit">
+        </div>      
+
+	</form>
+
+	<br>
+
+	<!-- 	<div class="message">
+			{{error}}
+			{{success}}
+		</div> -->
+
+</div>
+
+
+{% endblock %}

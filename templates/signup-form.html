@@ -1,0 +1,73 @@
+{% extends "base_new.html" %}
+
+<script>
+$(document).ready(function(){
+    $("#signup-button").click(function(){
+        $("#signup-form").submit();
+    });  
+});
+</script>
+
+{% block content %}
+
+
+    <h2 class="page-title">
+    	Signup
+    </h2>  
+
+<div id="signup-wrapper">
+
+	<form method="post" id="signup-form">
+
+		<table class="center">
+			<tr>
+				<td class="padded-top-20">
+					<input name="phone" id="phone-input" type="tel" placeholder="Mobile Phone #" required="true" value={{phone}}>
+
+				</td>
+			</tr>
+			<tr>
+				<td class="error">
+					{{error_user}}
+					{{error_phone}}
+				</td>
+
+			</tr>
+
+			<tr>
+				<td class="padded-top-20">
+					<input name="password" type="password" placeholder="Create a 4-digit PIN" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+				</td>
+			</tr>
+			<tr>
+				<td class="error">
+					{{error_password}}
+				</td>
+
+			</tr>
+
+			<tr>
+				<td class="padded-top-20">
+					<input name="verify" type="password" placeholder="Verify PIN" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+				</td>
+			</tr>
+			<tr>
+				<td class="error">
+					{{error_verify}}
+				</td>
+
+			</tr>
+
+
+		</table>
+
+		<div class="center padded-top-20">
+			<input type="submit">
+		</div>
+
+	</form>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<form method="post">
+
+<label>
+	<div id="label">
+		Username
+	</div>
+	
+	<input name="username" type="text">
+</label>
+
+
+<label>
+	<div id="label">
+		PIN
+	</div>
+
+	<input name="password" type="passowrd" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+</label>
+
+
+<label>
+	Verify PIN
+</label>
+
+<input name="verify" type="passowrd" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+
+<label>
+	Verify Password
+</label>
+
+<input type="password" name="verify">
+
+<label>
+	Phone Number
+</label>
+
+<input name="phone" type="tel">
+
+
+</form>
+
+
+
+{% endblock %}

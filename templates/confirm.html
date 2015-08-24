@@ -1,0 +1,70 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+<!-- JS -->
+
+	<!-- Twitter -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+	<!-- Facebook -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Messenger -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- End JS -->
+
+
+	{% if message %}
+		<div class="message">
+			{{message}}
+		</div>
+		<div class="sub-message">
+			{{sub_message}}
+		</div>
+	{% else %}
+	{% endif %}
+
+
+	<div id="social">
+
+		<div id="twitter" class="social-button inline">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://curbkarma.com/" data-text="I just used CurbKarma to be a #NeighborhoodHero. Add your car now and avoid your next parking ticket!" data-related="car_text" data-count="none">Tweet</a>
+		</div>
+
+		<div id="facebook" class="fb-share-button inline social-button" data-href="http://curbkarma.com/" data-layout="button">
+		</div>
+
+		<div id="messenger" class="fb-send inline social-button" data-href="http://curbkarma.com/">
+		</div>
+
+		<div id="email" class="inline social-button">
+			<a class="no-link" target="_blank" href="mailto:?Subject=Check%20out%20CurbKarma.com" target="_top">
+				<img id="email" src="/static/images/email.png">
+			</a>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+{% endblock %}

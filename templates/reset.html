@@ -1,0 +1,70 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+	<form method="post" id="signup-form">
+
+		<table class="center">
+
+			<tr>
+				<td class="padded-top-20">
+					<input name="password" type="password" placeholder="Create a 4-digit PIN" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+				</td>
+			</tr>
+			<tr>
+				<td class="error">
+					{{error_password}}
+				</td>
+
+			</tr>
+
+			<tr>
+				<td class="padded-top-20">
+					<input name="verify" type="password" placeholder="Verify PIN" pattern="[0-9]*" inputmode="numeric" maxlength="4" required="true">
+				</td>
+			</tr>
+			<tr>
+				<td class="error">
+					{{error_verify}}
+				</td>
+
+			</tr>
+
+			<tr class="hidden">
+				<td>
+					<input type="text" value="{{user_id}}">
+				</td>
+			</tr>
+
+		</table>
+
+		<div class="center padded-top-20">
+			<input type="submit">
+		</div>
+
+	</form>
+
+
+	{{user_id}}
+
+	<br>
+
+	{{rk}}
+
+	<br>
+
+	{{length}}
+
+	<br>
+
+	{{match_id}}
+
+	<br>
+
+	{{u}}
+
+	<br>
+
+	{{phone}}
+
+{% endblock %}

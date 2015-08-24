@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h3 class="page-title">
+    	Plates registered for {{nickname}}
+    </h3>
+
+	<br>
+    <hr>
+
+		<table>
+
+			<tr>
+		        <th>State</th>
+		     	<th>Plate</th>
+		     	<th>Phone #</th>
+		     	<th>Added</th>
+		     	<th>Last Modified</th>
+		     	<th>Unique Plate</th>
+		     	<th>User Id</th>
+		    </tr>
+
+			{% for x in p %}
+			    <tr>
+		    	<th>{{x.state}}</th>
+		    	<th>{{x.plate}}</th>
+		    	<th>{{x.phone}}</th>
+		    	<th>{{x.created}}</th>
+		    	<th>{{x.last_modified}}</th>
+		    	<th>{{x.unique_plate}}</th>
+		    	<th>{{x.user_id}}</th>
+			    </tr>
+			{% endfor %}
+
+		</table>
+
+	<br>
+
+	<a href="/newplate">Add a new plate</a>
+
+
+
+
+{% endblock %}

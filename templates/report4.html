@@ -1,0 +1,177 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+	{% if message %}
+		<div class="message">
+			{{message}}
+		</div>
+
+	{% else %}
+	{% endif %}
+
+
+<div id="report-wrapper">
+
+    <h2 class="page-title">
+    	Report an issue
+    </h2>
+    
+    <h4 class="page-subtitle">
+    	Enter the plate + the issue.  We'll let them know!
+	</h4>
+
+  	<form method="post" id="report-form">
+
+		<!-- PLATE AND STATE -->
+		<label>
+     		<div id="state-label">
+            	<b>State</b>
+         	</div>
+
+			<select name="state">
+				<option value="CA">CA</option>
+				<option value="AL">AL</option>
+				<option value="AK">AK</option>
+				<option value="AZ">AZ</option>
+				<option value="AR">AR</option>
+				<option value="CO">CO</option>
+				<option value="CT">CT</option>
+				<option value="DE">DE</option>
+				<option value="DC">DC</option>
+				<option value="FL">FL</option>
+				<option value="GA">GA</option>
+				<option value="HI">HI</option>
+				<option value="ID">ID</option>
+				<option value="IL">IL</option>
+				<option value="IN">IN</option>
+				<option value="IA">IA</option>
+				<option value="KS">KS</option>
+				<option value="KY">KY</option>
+				<option value="LA">LA</option>
+				<option value="ME">ME</option>
+				<option value="MD">MD</option>
+				<option value="MA">MA</option>
+				<option value="MI">MI</option>
+				<option value="MN">MN</option>
+				<option value="MS">MS</option>
+				<option value="MO">MO</option>
+				<option value="MT">MT</option>
+				<option value="NE">NE</option>
+				<option value="NV">NV</option>
+				<option value="NH">NH</option>
+				<option value="NJ">NJ</option>
+				<option value="NM">NM</option>
+				<option value="NY">NY</option>
+				<option value="NC">NC</option>
+				<option value="ND">ND</option>
+				<option value="OH">OH</option>
+				<option value="OK">OK</option>
+				<option value="OR">OR</option>
+				<option value="PA">PA</option>
+				<option value="RI">RI</option>
+				<option value="SC">SC</option>
+				<option value="SD">SD</option>
+				<option value="TN">TN</option>
+				<option value="TX">TX</option>
+				<option value="UT">UT</option>
+				<option value="VT">VT</option>
+				<option value="VA">VA</option>
+				<option value="WA">WA</option>
+				<option value="WV">WV</option>
+				<option value="WI">WI</option>
+				<option value="WY">WY</option>
+			</select>
+		</label>
+
+		<label>
+	 		<div id="label">
+	        	<b>License Plate Number</b>
+	     	</div>
+
+	     	<input id="plate-input" type="text" name="plate" value={{plate}}>
+		</label>
+
+
+		<!-- INCIDENT DETAILS -->
+ 		<!-- <label> -->
+	 		<div id="issue-label">
+	        	<b>Describe the issue</b>
+	     	</div>
+     	<!-- </label> -->
+
+		<label>
+			<div id="incident-list">
+		     	<select id="incident-select" name="status">
+			     	<option value="NULL">-</option>
+				
+			     	{% if status == "may be" %} <!-- SELECT APPROPRIATE DROPDOWN IF ALREADY SELECTED -->
+				     	<option value="may be" selected>Car might get</option>
+			     	{% else %}
+				     	<option value="may be">Car might get</option>
+			     	{% endif %}
+			     	
+			     	{% if status == "has been" %}
+				     	<option value="has been" selected>Car has been</option>
+			     	{% else %}
+				     	<option value="has been">Car has been</option>
+			     	{% endif %}
+
+		     	</select>
+	     	</div>
+		</label>
+
+
+		<label>
+			<div id="incident-list">
+				<select id="incident-select" name="incident">		
+					<option value="NULL">-</option>
+					
+					{% if incident == "ticketed" %} <!-- SELECT APPROPRIATE DROPDOWN IF ALREADY SELECTED -->
+						<option value="ticketed" selected>Ticketed</option>
+					{% else %}
+						<option value="ticketed">Ticketed</option>
+					{% endif %}
+					
+					{% if incident == "towed" %}
+						<option value="towed" selected>Towed</opiton>
+					{% else %}
+						<option value="towed">Towed</opiton>
+					{% endif %}
+					
+					{% if incident == "vandalized" %}
+						<option value="vandalized" selected>Vandalized</option>
+					{% else %}
+						<option value="vandalized">Vandalized</option>
+					{% endif %}
+
+				</select>
+	     	</div>
+		</label>
+
+
+		<!-- DETIALS -->
+		<div id="notes-div" class="center">
+			<p id="issue-notes">Any other notes?</p>
+			<textarea name="notes" class="center" id="issue-notes-area" maxlength="60" wrap="soft">{{notes}}</textarea>
+		</div>
+
+   	  	<br>
+
+        <div id="report-submit">
+          <input type="submit">
+        </div>      
+
+	</form>
+
+	<br>
+
+	<!-- 	<div class="message">
+			{{error}}
+			{{success}}
+		</div> -->
+
+</div>
+
+
+{% endblock %}

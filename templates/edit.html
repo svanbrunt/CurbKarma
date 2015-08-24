@@ -1,0 +1,47 @@
+{% extends "base_new.html" %}
+
+
+{% block content %}
+
+<form name="delete" method="post">
+	<table class="profile-table">
+
+		<tr class="profile-row">
+
+			<td rowspan="1" id="profile-state">
+				{{state}}
+			</td>
+
+			<td id="profile-plate">
+				{{plate}}
+			</td>
+
+<!-- 			<td rowspan="2">
+				<input type="text" name="delete" value="{{user_id}}" >
+			</td> -->
+
+			<td rowspan="1">
+				<a href="#" onclick="document.delete.submit();">
+				Delete
+				</a>
+			</td>
+		
+		</tr>
+
+<!-- 		<tr class="profile-row">
+			<td id="profile-phone">
+				{{phone}}
+			</td>
+		</tr> -->
+		
+	</table>
+
+</form>
+
+<!-- {% if d %}
+	{{user_id}}<br>
+	{{unique_plate}}<br>
+	{{d.unique_plate}}
+{% endif %} -->
+
+{% endblock %}

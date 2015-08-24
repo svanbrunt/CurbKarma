@@ -1,0 +1,125 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+{{user_id}}
+<br>
+{{var_type}}
+
+	{{message}}
+
+	{% if q %}
+    <h3 id="tight_bottom">
+    	All registered plates
+    </h3>
+
+	<br>
+    <hr>
+
+	<table class="max-width admin-table">
+
+		<tr id="top_row">
+			<th>Plate ID</th>
+	        <th>State</th>
+	     	<th>Plate</th>
+	     	<th>Phone #</th>
+	     	<th>Added</th>
+	     	<!-- <th>Last Modified</th> -->
+	     	<!-- <th>Unique Plate</th> -->
+	     	<!-- <th>User ID</th> -->
+	     	<!-- <th>User</th> -->
+	    </tr>
+
+		{% for x in q %}
+
+			    <tr>
+				    <td>{{x.key().id_or_name()}}</td> 
+			    	<td>{{x.state}}</td>
+			    	<td>{{x.plate}}</td>
+			    	<td>{{x.phone}}</td>
+			    	<td>{{x.created}}</td>
+			    	<!-- <th>{{x.last_modified}}</th> -->
+			    	<!-- <th>{{x.unique_plate}}</th> -->
+			    	<!-- <td>{{x.user_id}}</td> -->
+			    	<!-- <td>{{x.name}}</td> -->
+			    </tr>
+
+		{% endfor %}
+
+	</table>
+
+	{% endif %}
+
+<br>
+
+
+	{% if r %}
+    <h3 id="tight_bottom">
+    	All reported issues
+    </h3>
+
+	<hr>
+	<br>
+
+	<table class="max-width admin-table">
+
+		<tr id="top_row">
+	        <th>Date</th>
+	     	<th>Reported by</th>
+	     	<th>State #</th>
+	     	<th>Plate</th>
+	     	<th>Phone</th>
+	     	<th>Status</th>
+	     	<th>Incident</th>
+	     	<th>Notes</th>
+	    </tr>
+
+		{% for x in r %}
+		    <tr>   
+		    	<td>{{x.created}}</td>
+		    	<td>{{x.nickname}}</td>
+		    	<td>{{x.state}}</td>
+		    	<td>{{x.plate}}</td>
+		    	<td>{{x.phone}}</td>
+		    	<td>{{x.status}}</td>
+		    	<td>{{x.incident}}</td>
+		    	<td>{{x.notes}}</td>
+		    </tr>
+		{% endfor %}
+
+	</table>
+
+	{% endif %}
+
+
+
+
+	{% if s %}
+    <h3 id="tight_bottom">
+    	All users
+    </h3>
+
+	<hr>
+	<br>
+
+	<table class="max-width admin-table">
+
+		<tr id="top_row">
+	        <th>Phone</th>
+	     	<th>Last Modified</th>
+	    </tr>
+
+		{% for x in s%}
+		    <tr>   
+		    	<td>{{x.phone}}</td>
+		    	<td>{{x.modified}}</td>
+		    </tr>
+		{% endfor %}
+
+	</table>
+
+	{% endif %}
+
+
+
+{% endblock %}

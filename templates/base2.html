@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CarText</title>
+    <link rel="stylesheet" href="static/styles.css">
+
+    <!-- <link type="text/css" rel="stylesheet" href="/static/main.css"> -->
+    <!-- <link rel="stylesheet" href="stylesheets/pygment_trac.css"> -->
+    <!-- <link rel="shortcut icon" href="images/logo.ico"/> -->
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <script src="//use.typekit.net/hgm4lro.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="keyword" content="parking ticket car SFMTA towing parking meter parking sign"
+    <meta name="description" content="CarText is neighborhood watch for cars."
+    
+  </head>
+  
+  <body>
+
+
+      <!-- FIXED HEARDER -->
+      <div id="header">
+        <nav>
+
+          <span id="header-text">
+            <a href="/">CarText</a>
+          </span>
+
+          <!-- <span id="heart"> -->
+          <span id="profile-text">
+            {% if nickname %}
+              <a href="/profile"> {{nickname}} </a> | <a href="/logout">Logout</a>
+            {% else %}
+              <a href="/login">Login</a> 
+              <!-- or Register  -->
+            {% endif %}   
+          </span>
+
+        </nav>
+      </div> <!-- end header -->
+
+
+      <!-- FIRST SECTION WITH HERO IMAGE -->
+      <section id="landing-hero">     
+        
+        <div class="container">
+            
+          {% block content %}
+          {% endblock %}
+
+        </div>  <!-- end of container  -->
+      
+      </section>  <!-- END OF HERO SECTION -->
+
+      
+
+      <!-- FOOTER -->
+      <section id="footer">
+
+        <div id="footer-container">
+
+          <span id="footer-text">
+            © 2015
+          </span>
+
+          <span id="footer-text">
+            CarText
+          </span>
+
+        </div>
+      </section> <!-- END FOOTER
+
+
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>

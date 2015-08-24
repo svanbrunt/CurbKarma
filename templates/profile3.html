@@ -1,0 +1,68 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+    <h3 class="page-title">
+    	Plates registered for {{user.phone}}
+    </h3>
+
+	<br>
+
+	<div id="profile-wrapper">
+
+	{% for x in p %}
+
+	<table class="profile-table">
+
+		<tr class="profile-row">
+
+			<td rowspan="2" id="profile-state">
+				{{x.state}}
+			</td>
+
+			<td id="profile-plate">
+				{{x.plate}}
+			</td>
+
+			<td rowspan="2" class="hidden">
+				{{x.unique_user_plate}}
+			</td>
+
+ <!-- Revisit edit button -->
+			<td rowspan="2">
+				<a href="/edit?state={{x.state}}&plate={{x.plate}}">
+				Edit
+				</a>
+			</td>
+		
+		</tr>
+
+
+		<tr class="profile-row">
+			<td id="profile-phone">
+				{{x.phone}}
+			</td>
+		</tr>
+		
+	</table>
+
+	<form name="Test" method="post">
+	</form>
+
+	{% endfor %}
+
+
+<div id="new-plate" class="center button" id="profile-add">
+	<a class="no-link" href="/newplate">Add a new plate</a>
+</div>
+
+{% endblock %}
+
+<!--<script>
+	onload.location.reload(true)
+ </script>  -->
+
+
+
+<!-- <a href="#" onclick="document.Test.submit();">Delete</a> -->
+<!-- href="/profile?plate={{x.plate}}&id={{x.user_id}}&user_plate={{x.unique_user_plate}}"  -->

@@ -1,0 +1,40 @@
+{% extends "base_new.html" %}
+
+{% block content %}
+
+    <h4 id="home-title" class="page-title">
+    	Neighborhood Watch for your car
+    </h4>
+
+    <h4 class="page-subtitle">
+    	Neighbors can send a text to report parking violations, vandalism, or any other issues 
+    </h4>
+
+
+	<div id="home-button" class="center no-link">
+		<a class="no-link" href="/report">
+			<p id="hb-head">Report an issue</p>
+			<p id="hb-sub">Tell us the license plate # and the issue you see, and we’ll text the car’s owner</p>
+		</a>
+	</div>
+
+
+	<div id="home-button" class="center no-link">
+		<a class="no-link" href="/signup">
+			<p id="hb-head">Register your car</p>
+			<p id="hb-sub">Add your license plate so we can text you when someone reports an issue with your car</p>
+		</a>
+	</div>
+
+<!-- 	<div id="home-image-wrapper" class="center">
+		<img id="home-image" src='static/images/car-text flow.png'>
+	</div>
+ -->
+	<div id="home-image-wrapper" class="center">
+		<a class="no-link" href="/about">
+			<p id="how-it-works">Learn more about how CurbKarma works</p>
+		</a>
+	</div>
+
+{% endblock %}
+

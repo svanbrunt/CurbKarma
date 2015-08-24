@@ -1,0 +1,898 @@
+input[type=number] {
+    -webkit-text-security: disc;
+}
+
+body {
+    position: relative;
+    font-family: 'Mandali', sans-serif;
+    font-size: 1em;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1px;
+    /*line-height: 28px;*/
+}
+
+#header {
+    display: block;
+    z-index: 100;
+    left: 0;
+    top: 0px;
+    /*height: 65px;*/
+    width: 100%;
+    position: fixed;
+    /*background-color: black;*/
+    position: fixed;
+    height: 75px;
+    text-decoration: none;
+    display: block;
+    background-color: #FBFBFB;
+}
+
+#header-container {
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo {
+    width: 200px;
+/*    padding-right: 20px;
+    position: absolute;*/
+    margin-top: -58px;
+}
+
+@media only screen and (max-width: 495px) {
+    .logo {
+        width: 160px;
+        margin-top: -44px;
+    }
+}
+
+
+#header-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #    ;
+    text-decoration: none;
+    padding-left: 45px;
+}
+
+@media only screen and (max-width: 495px) {
+    #header-text {
+        font-size: 18px;
+        padding-left: 30px;
+    }
+}
+
+/*Within Header of Base.html */
+#profile-text {
+    color: #00ad39;
+    text-decoration: none;
+    float: right;
+    display: inline;    
+    margin-right: 10px;
+    font-size: 22px;
+    padding-right: 3px;
+    margin-top: -12px;
+    /*font-weight: bold;*/
+    font-family: 'Mandali', sans-serif;
+}
+
+#login-link {
+    color: #00ad39;
+    text-decoration: none
+}
+
+
+@media only screen and (max-width: 495px) {
+    #profile-text {
+        font-size: 18px;
+    }
+}
+
+#logout-text {
+    color: #fff;
+    text-decoration: none;
+    float: right;
+    display: inline;    
+    margin-right: 10px;
+    font-size: 14px;
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 495px) {
+    #logout-text {
+        font-size: 12px;
+    }
+}
+
+
+
+/*BASE.html main bocdy that Content blocks are in*/
+.main {
+    position: relative;
+    clear: both; 
+    min-height: 625px;
+    margin-top: -0px   
+}
+
+@media only screen and (max-width: 495px) {
+    .main {
+        min-height: 600px;
+    }
+}
+
+/*BASE.html main Content blocks represented by other templates*/
+#content {
+    margin-top: 20px;
+    padding-top: 100px;
+    max-width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+/* BASE.html TBD*/
+#footer {
+    /*position: fixed;*/
+    height: 150px;
+    text-decoration: none;
+    display: block;
+    background-color: black;
+    /*clear: both;*/
+    /*position: relative;*/
+/*    z-index: 10;
+    height: 3em;
+    margin-top: -3em;*/
+}
+
+
+#footer-container {
+    padding-top: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+#footer-text {
+    font-size: 1em;
+    font-weight: normal;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#head {
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+
+.page-title {
+    font-family: 'Mandali', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    /*text-align: center;*/
+}
+
+@media only screen and (max-width: 495px) {
+    .page-title {
+        font-size: 22px;
+        margin-top: -20px;
+    }
+}
+
+#home-title {
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 375px) {
+    #home-title {
+    margin-top: -5px;
+    font-size: 20px;
+    }
+}
+
+
+.page-subtitle {
+    /*font-family: monospace;*/
+    text-align: center;
+    font-size: 19px;
+    font-weight: normal;
+    margin-top: 0px;
+    font-family: 'Mandali', sans-serif;
+    line-height: 29px;
+}
+
+@media only screen and (max-width: 495px) {
+    .page-subtitle {
+        font-size: 16px;
+        margin-top: 0px;
+        line-height: 24px;
+    }
+}
+
+
+
+/*Report(2).html*/
+#report-wrapper {
+    max-width: 980px;
+    margin: auto;
+    display: block;
+    overflow: auto;
+    /*background-color: #FBFBFB;*/
+    border-radius: 5px;
+
+}
+
+@media only screen and (max-width: 495px) {
+    #report-wrapper {
+        padding-top: 20px;
+        margin-top: -25px;
+    }
+}
+
+
+#report-form {
+    text-align: center;
+    margin-top: -25px;
+}
+
+@media only screen and (max-width: 495px) {
+    #report-form{
+        margin-top: -10px;
+    }
+}
+
+#report-table {
+    margin: auto;
+    text-align: center;
+}
+
+#plate-input{
+    /*width: 300px;*/
+    font-size: 24px;
+    padding: 2px;
+    font-family: monospace;
+    text-align: center;
+
+}
+
+
+.table-header-pad-right {
+    padding-right: 30px;
+}
+
+
+#issue-table {
+    margin: auto;
+}
+
+
+.issue-detail {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+
+#issue-notes {
+    font-weight: bold;
+}
+
+#issue-notes-area {
+    max-width: 90%;
+    height: 50px;
+    font-size: 24px;
+}
+
+#notes-div {
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+@media only screen and (max-width: 495px) {
+    .display-large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 495px) {
+    .display-small {
+        display: none;
+    }
+}
+
+#submit-button {
+    background-color: #00ad39;
+}
+
+/*Confirm*/
+
+#social {
+    max-width: 725px;
+    margin: auto;
+}
+
+.inline {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 550px) {
+    .inline {
+        display: block;
+        padding-top: 20px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #facebook {
+        display: block;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #messenger {
+        display: block;
+        margin: auto;
+    }
+}
+
+
+.social-button {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+@media only screen and (max-width: 770px) {
+    .social-button {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .social-button {
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .social-button {
+        padding-left: 0%;
+        padding-right: 0%;
+        text-align: center;
+    }
+}
+
+#email {
+    height: 30px;
+    vertical-align: top;    
+}
+
+
+
+/*Newplate.html*/
+
+#newplate-form {
+    text-align: center;
+    margin-top: -12px;
+}
+
+
+#newplate-submit {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 370px) {
+    #help {
+        display: none;
+    }
+}
+
+
+/*ABOUT PAGE*/
+
+#YT-frame {
+    max-width: 560px;
+}
+
+#yt-video {
+    width: 560px;
+    height: 315px; 
+}
+
+@media only screen and (max-width: 495px) {
+    #yt-video {
+        width: 375px;
+        height: 211px;
+    }
+}
+
+#flow-horizontal {
+    max-width: 500px;
+}
+
+
+/*PROFILE PAGE*/
+
+#profile-wrapper {
+    max-width: 900px;
+    margin: auto;
+}
+
+#profile-row {
+    width: 90%;
+    background-color: gray;
+    height: 200px;
+    margin: auto;
+    display: block;
+    clear: both;
+}
+
+#plate-logo {
+    padding-left: 10px;
+    background-color: #FFF;
+    height: 160px;
+    width: 160px;
+    padding-top: 20px;
+    display: inline;
+}
+
+
+.profile-table {
+/*    border-color: black;
+    border: solid;*/
+    /*width: 900px;*/
+    margin: 0 auto 40px auto;
+}
+
+.profile-row {
+    /*margin-top: 40px;*/
+    /*background-color: gray;*/
+    background-color: #FBFBFB;
+}
+
+
+#state-list{
+    font-size: 24px;
+}
+
+#profile-state   {
+    min-width: 140px;   
+    font-size: 3.5em;
+    font-family: monospace;
+}
+
+@media only screen and (max-width: 625px) {
+#profile-state   {
+    min-width: 50px; 
+    font-family: 3em;  
+    }
+}
+
+#profile-plate {
+    min-width: 250px;
+    /*max-width: 320px;*/
+    font-family: monospace;
+    font-size: 2.2em;
+    height: 50px;
+}
+
+@media only screen and (max-width: 625px) {
+#profile-plate   {
+    min-width: 125px;   
+    font-size: 2em;
+    }
+}
+
+
+#profile-phone {
+    /*width: 280px;*/
+    font-family: monospace;
+    font-size: 1.4em;
+    height: 50px;
+}
+
+#new-plate {
+    margin-bottom: 30px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.message {
+    color: #00ad39;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sub-message {
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+#profile-add {
+    padding-top: 5px;
+}
+
+
+
+/* SIGNUP PAGE */
+
+#signup-wrapper {
+    max-width: 540px;
+    margin: auto;
+    display: block;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+.padded-top-20 {
+    padding-top: 20px;
+}
+
+#forgot-text {
+    color: gray;
+    font-style: monospace;
+}
+
+.red {
+    color: red;
+    font-size: 16px;
+}
+
+
+/* ADMIN PAGE*/
+
+.admin-table {
+    text-align: center;
+}
+
+
+
+label {
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+@media only screen and (max-width: 495px) {
+label {
+  margin-top: -15px;
+    }
+}
+
+label + label {
+    margin-top: 3px;
+}
+
+@media only screen and (max-width: 495px) {
+label {
+  margin-top: -8px;
+    }
+}
+
+input[type=text] {
+    width: 300px;
+    font-size: 24px;
+    padding: 2px;
+    font-family: monospace;
+    text-align: center;
+}
+
+input[type=tel] {
+    width: 300px;
+    font-size: 24px;
+    padding: 2px;
+    font-family: monospace;
+    text-align: center
+}
+
+
+input[type=password] {
+    width: 300px;
+    font-size: 24px;
+    padding: 2.1px;
+    font-family: monospace;
+    text-align: center
+}
+
+
+input[type=number] {
+    width: 150px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+
+
+
+
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+select {
+    font-size: 20px;
+    font-family: monospace;
+    padding: 2px;   
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 24px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 20px;
+  width: 100px;
+  font-family: monospace;
+}
+
+
+
+table {
+    text-align: center;
+    /*border-style: solid;*/
+    border-width: 1px;
+    border-color: gray;
+
+}
+
+
+ul {
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+li {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-decoration: none;
+}
+
+
+
+td {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 1em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 495px) {
+    td {
+    padding-left: 15px;
+    padding-right: 15px;
+    }
+}
+
+#label {
+/*    margin-bottom: 5px;
+    margin-top: 12px;*/
+    margin: 12px auto 12px auto;
+    text-align: left;
+    text-align: center;
+    padding: 0px 30px 0px 30px;
+}
+
+#state-label {
+/*    margin-bottom: 5px;
+    margin-top: 12px;*/
+    margin: 24px auto 12px auto;
+    text-align: left;
+    text-align: center;
+    padding: 0px 30px 0px 30px;
+}
+
+#issue-label {
+    /*    margin-bottom: 5px;
+    margin-top: 12px;*/
+    margin: 18px auto 0px auto;
+    text-align: left;
+    text-align: center;
+    padding: 0px 30px 0px 30px;
+}
+
+@media only screen and (max-width: 495px) {
+    #issue-label {
+        padding-bottom: 15px;
+    }
+}
+
+#incident-list {
+    margin-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#incident-select {
+    width: 160px;
+}
+
+@media only screen and (max-width: 495px) {
+    #incident-select {
+        width: 200px;
+    }
+}
+
+
+#report-submit {
+/*    margin-bottom: 5px;
+    margin-top: 12px;*/
+    margin: 6px auto 5px auto;
+    text-align: center;
+}
+
+
+#home-button {
+    height: 90px;
+    width: 325px;
+    border: solid 1px #BEBEBE;
+    background-color: #FBFBFB;
+    text-align: center;
+    border-radius: 5px;
+    /*font-weight: bold;*/
+    vertical-align: middle;
+    /*font-size: 22px;*/
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 375px) {
+    #home-button {
+    margin-top: 30px;
+    }
+}
+
+
+#hb-head {
+    font-size: 1.5em;
+    margin-top: -10px;
+    font-family: 'Mandali', sans-serif;
+}
+
+#hb-sub {
+    font-size: 15px;
+    line-height: 18px;
+    margin-top: -24px;
+    font-family: 'Mandali', sans-serif;
+}
+
+
+#home-image-wrapper {
+    margin-top: 75px;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 495px) {
+    #home-image {
+        max-width: 400px;
+    }
+}
+
+
+
+#results {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+}
+
+
+.no-link {
+    text-decoration: none;
+}
+
+.button {
+    height: 40px;
+    width: 140px;
+    border: solid 1px #BEBEBE;
+    background-color: #FAFAFA;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    /*font-weight: normal;*/
+    vertical-align: middle;
+    font-size: 18px;
+    padding-top: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+#bound {
+    table-layout: fixed;
+    width: 1000px
+}
+
+
+.max-width {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 495px) {
+    .hide-large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 495px) {
+    .hide-small {
+        display: none;
+    }
+}
+
+#vert {
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+
+#how-it-works {
+    font-size: 1.5em;
+    margin-top: -15px;
+}
+
+@media only screen and (max-width: 495px) {
+    #how-it-works {
+    font-size: 1.25em;
+    }
+}
+
+
+
