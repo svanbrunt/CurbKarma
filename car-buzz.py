@@ -369,7 +369,6 @@ class Admin(MainHandler):
 			# 	message = "Please log in as an admin; insufficient privleges"
 			# 	self.render("admin.html", message=message)
 
-
 		else:
 			self.redirect('/login')
 
